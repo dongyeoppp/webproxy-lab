@@ -1,7 +1,40 @@
+<!DOCTYPE html>
 <html>
-<head><title>test</title></head>
-<body> 
-<img align="middle" src="godzilla.gif">
-Dave O'Hallaron
-</body>
+  <head>
+    <title>test</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .content {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      video {
+        margin-top: 20px;
+        width: 70%; /* 동영상의 너비를 조정하여 좀 더 크게 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <img src="godzilla.gif" alt="Godzilla" />
+      <video src="video.mp4" controls loop autoplay></video>
+      <p>Dave O'Hallaron</p>
+    </div>
+    <form action="/cgi-bin/adder" method="GET">
+        <label for="num1">First Number:</label><br>
+        <input type="text" id="num1" name="num1"><br><br>
+        <label for="num2">Second Number:</label><br>
+        <input type="text" id="num2" name="num2"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
